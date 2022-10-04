@@ -1,4 +1,12 @@
+import { useEffect } from "react";
+
 export default function App() {
+  useEffect(() => {
+    fetch("/test")
+      .then((response) => response.text())
+      .then(console.log);
+  }, []);
+
   return (
     <>
       <header className="bg-emerald-50 p-6 shadow shadow-emerald-800/50">
